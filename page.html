@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SimpleCowboy</title>
+  <script src="https://cdn.tailwindcss.com/"></script>
+</head>
+
+<body>
+  <div class="grid h-screen place-items-center">
+    <h3 class="text-6xl font-bold"> Hello Cowboy friend!</h3>
+    <img src="https://images.emojiterra.com/twitter/v13.1/512px/1f920.png" />
+    <h3 class="text-2xl font-bold"> Download NOW your FREE cowboy certificate!</h3>
+    <button onclick="download('Cowboy Certificate', 'Cowboy')"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <a href="" id="a">click here to download your certificate! </a>
+    </button>
+  </div>
+</body>
+</html>
+
+<script>
+  function download(text, filename) {
+    var a = document.createElement('a');
+            a.setAttribute('href', 'data:text/plain;charset=utf-8,'+encodeURIComponent(text));
+            a.setAttribute('download', filename);
+            a.click()
+        }
+</script>
